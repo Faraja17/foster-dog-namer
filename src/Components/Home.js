@@ -3,6 +3,7 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import About from './About';
 import Signup from './Signup';
+const dogNames = require('dog-names');
 
 const Home = () => {
     const [data, setData] = React.useState(null);
@@ -30,6 +31,7 @@ const Home = () => {
         <div className='api' id='start'>
             <p>
                 {!data ? "Loading..." : data}
+                dogNames.all();
             </p>
         </div>
         </>
