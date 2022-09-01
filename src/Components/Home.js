@@ -5,8 +5,6 @@ import About from './About';
 import Signup from './Signup';
 const dogNames = require('dog-names');
 
-const name  = dogNames.all();
-
 const Home = () => {
     const [data, setData] = React.useState(null);
 
