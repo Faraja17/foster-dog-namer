@@ -32,7 +32,6 @@ const Home = () => {
             
             <p>
                 {!data ? "Loading..." : data}
-                {name};
             </p>
         </div>
         </>
