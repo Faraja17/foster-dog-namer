@@ -14,6 +14,9 @@ const Home = () => {
             .then((data) => setData(data.message));
     }, []);
 
+
+    const name  = dogNames.all();
+
     return (
 
     <div className='App'>
@@ -29,9 +32,10 @@ const Home = () => {
                
         </div>
         <div className='api' id='start'>
+            
             <p>
                 {!data ? "Loading..." : data}
-                dogNames.all();
+                {name};
             </p>
         </div>
         </>
