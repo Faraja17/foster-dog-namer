@@ -1,8 +1,10 @@
 import React from 'react';
-import {styled, Button, Grid, FormControl, 
+import {styled } from '@mui/material/styles';
+import {
+    Button, Grid, FormControl, 
     FormLabel, RadioGroup, Paper,
-    Radio, Box, FormControlLabel, TextField} 
-    from '@mui/material';
+    Radio, Box, FormControlLabel, TextField
+} from '@mui/material';
 
 const Item = styled(Paper)(({theme}) => ({
     ...theme.typography.body2,
@@ -12,19 +14,22 @@ const Item = styled(Paper)(({theme}) => ({
     color: theme.palette.text.secondary
 }));
 
-const Namer = (props) => {
+export default function FullWidthGrid(props) {
     const {
         handleChange, 
         params,
         generateName
     } = props;
 
-    const {name, gender, size, color, temperament} = {params};
+    const {gender, name, size, color, temperament} = params;
 
     return (
-        <Box id="start">
-             <Grid container justify="space-around" alignItems="center">
-                <Grid container direction="row" paddingLeft={5} paddingTop={5}>
+        <Box id="start" sx={{ bgcolor: 'text.primary', flexGrow: 1, padding: 5, 
+        bottom: "10vh", width: "100vw", margin: 0 }}>
+            <Grid container spacing={2} justify="space-around">
+                <Grid item xs={12} md={3}>
+             {/* <Grid container spacing={2} justify="center" alignItems="center">
+                <Grid container direction="row" paddingLeft={5} paddingTop={5}> */}
                     <Item>
                         <FormControl component="fieldset">
                             <FormLabel align="left" component="legend">
@@ -39,7 +44,8 @@ const Namer = (props) => {
                             </RadioGroup>
                         </FormControl>
                     </Item>
-
+                </Grid>
+                <Grid item xs={12} md={3}>
                     <Item>
                         <FormControl component="fieldset">
                             <FormLabel align="left" component="legend">
@@ -53,7 +59,8 @@ const Namer = (props) => {
                             </RadioGroup>
                         </FormControl>
                     </Item>
-
+                </Grid>
+                <Grid item xs={12} md={3}>
                     <Item>
                         <FormControl component="fieldset">
                             <FormLabel align="left" component="legend">
@@ -68,7 +75,8 @@ const Namer = (props) => {
                             </RadioGroup>
                         </FormControl>
                     </Item>
-
+                </Grid>
+                <Grid item xs={12} md={3}>
                     <Item>
                         <FormControl component="fieldset">
                             <FormLabel align="left" component="legend">
@@ -86,18 +94,17 @@ const Namer = (props) => {
                 </Grid>
             </Grid>
 
-            <Grid item xs={12} style={{marginLeft:0}} paddingBottom={5}>
+            <Grid item xs={12} style={{marginLeft:0}} paddingTop={2}>
                 <Item>
                     <Grid container spacing={2}>
-                        <Grid item xs={12} md={3}>
-                            <Button fullWidth size="large" onClick={generateName} variant="contained">
+                        <Grid item xs={12} md={6} lg={3}>
+                            <Button fullWidth size="large" variant="contained" onClick= {generateName}>
                                 Generate
                             </Button>
                         </Grid>
 
-                        <Grid item xs={12} md={9}>
-                            <TextField InputLabelProps={{shrink: true}} label="Name" 
-                            size="small" disabled fullWidth input={name} />
+                        <Grid item xs={12} md={6} lg={9}>
+                            <TextField InputLabelProps={{shrink: true}} label="Here is your generated name:" size="small" disabled fullWidth value={name} />
                         </Grid>
                     </Grid>
                 </Item>
@@ -107,4 +114,4 @@ const Namer = (props) => {
 };
 
 
-export default Namer;
+// export default Namer;
