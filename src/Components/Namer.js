@@ -22,7 +22,7 @@ const Namer = (props) => {
     const {name, gender, size, color, temperament} = params;
 
     return (
-        <Box id="start">
+        <Box class="api" id="start">
              <Grid container justify="space-around" alignItems="center">
                 <Grid container direction="row" paddingLeft={5}>
                     <Item>
