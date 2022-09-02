@@ -31,10 +31,10 @@ const Namer = (props) => {
                                 Gender
                             </FormLabel>
                                 
-                            <RadioGroup row aria label="gender" defaultValue="neutral" 
+                            <RadioGroup row aria label="gender" defaultValue="female" 
                             name="gender" value={gender} onChange={handleChange}>
-                                <FormControlLabel value="neutral" control={<Radio />} label="Neutral" />
                                 <FormControlLabel value="female" control={<Radio />} label="Female" />
+                                <FormControlLabel value="neutral" control={<Radio />} label="Neutral" /> 
                                 <FormControlLabel value="male" control={<Radio />} label="Male" />
                             </RadioGroup>
                         </FormControl>
@@ -97,7 +97,7 @@ const Namer = (props) => {
 
                         <Grid item xs={12} md={9}>
                             <TextField InputLabelProps={{shrink: true}} label="Name" 
-                            size="small" disabled fullWidth value={name} />
+                            size="small" disabled fullWidth input={name} />
                         </Grid>
                     </Grid>
                 </Item>

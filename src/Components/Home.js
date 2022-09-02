@@ -25,8 +25,8 @@ const Home = () => {
     };
 
     const [params, setParams] = useState({
-        gender: "Female",
-        temperament: "Neutral"
+        gender: "female",
+        temperament: "neutral"
     });
 
     const handleChange = e => {
@@ -46,12 +46,14 @@ const Home = () => {
 
         let name = "";
 
-        if (gender === "Female") {
-            temperament === "Neutral"
+        if (gender === "female") {
+            temperament === "neutral"
                 ? name = getRandom(femaleDog).femaleDog
                 : name = getRandom(maleDog).maleDog; 
             console.log(name)
-        } 
+        } else {
+            name = getRandom(maleDog).maleDog; 
+        }
 
         setParams({...params, name : {name}})
     console.log({name});
