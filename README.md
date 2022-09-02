@@ -1,4 +1,4 @@
-# dog-namer-app
+# Foster Dog Namer App
 
 A full stack foster dog namer web application produced from an original idea!
 
