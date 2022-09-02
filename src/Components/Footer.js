@@ -1,21 +1,25 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 
 const Footer = () => {
     return (
         <>
             <div className='footer' id='footer'>
-            <Link to="/" className='connect'>
-                <span className='connect'>Instagram</span>
-            </Link>
             
-            <Link to="/" className='connect'>
-                <span className='connect'>TikTok</span>
-            </Link>
+                <span className='connect'>
+                    <a className="connect" href="https://www.soocial.com/dog-instagram-names/" >Instagram</a>
+                
+                </span>
             
-            <Link to="/" className='connect'>
-                <span className='connect'>YouTube</span>
-            </Link>
+                <span className='connect'>
+                    <a className="connect" href="https://www.tiktok.com/tag/dognames?lang=en" >TikTok</a>
+                
+                </span>
+
+                <span className='connect'>
+                    <a className="connect" href="https://www.youtube.com/results?search_query=Letting+Homeless+Puppies+Pick+Their+Name" >YouTube</a>
+                
+                </span>
+            
             
             <p className="copyright"> &copy; {new Date().getUTCFullYear()} Faraja Thompson. All rights reserved.</p>
         </div>

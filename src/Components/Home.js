@@ -6,13 +6,13 @@ import Signup from './Signup';
 import Main from './Main';
 
 const Home = () => {
-    // const [data, setData] = React.useState(null);
+    const [data, setData] = React.useState(null);
 
-    // React.useEffect(() => {
-    //     fetch("/api")
-    //         .then((res) => res.json())
-    //         .then((data) => setData(data.message));
-    // }, []);
+    React.useEffect(() => {
+        fetch("/api")
+            .then((res) => res.json())
+            .then((data) => setData(data.message));
+    }, []);
 
     
 
