@@ -3,7 +3,11 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import About from './About';
 import Signup from './Signup';
-const dogNames = require('dog-names');
+import {styled} from '@mui/material';
+import { Fragment } from 'react';
+import { useState } from 'react';
+import Namer from './Namer';
+
 
 const Home = () => {
     const [data, setData] = React.useState(null);
@@ -13,6 +17,10 @@ const Home = () => {
             .then((res) => res.json())
             .then((data) => setData(data.message));
     }, []);
+
+    function getRandom(arr) {
+        return arr [Math.floor(Math.random() * arr.length)];
+    }
 
     return (
 
@@ -28,12 +36,18 @@ const Home = () => {
             <a href="#start" className="call-to-action2" >Try It Now</a>
                
         </div>
-        <div className='api' id='start'>
+
+        <Fragment>
+            <Namer />
+        </Fragment>
+        
+
+        {/* <div className='api' id='start'>
             
             <p>
                 {!data ? "Loading..." : data}
             </p>
-        </div>
+        </div> */}
         </>
         <About /> {/*This is the about component*/}
         <Signup /> {/*This is the signup component*/}
