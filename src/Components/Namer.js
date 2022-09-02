@@ -16,13 +16,13 @@ const Namer = (props) => {
     const {
         handleChange = () => {}, 
         params={}, 
-        generateName = () => {}
+        generateName = () => {},
     } = props;
 
-    const {gender, size, color, temperament} = params;
+    const {name, gender, size, color, temperament} = params;
 
     return (
-        <Box>
+        <Box id="start">
              <Grid container justify="space-around" alignItems="center">
                 <Grid container direction="row" paddingLeft={5}>
                     <Item>
@@ -89,10 +89,15 @@ const Namer = (props) => {
             <Grid item xs={12} style={{marginLeft:0}}>
                 <Item>
                     <Grid container spacing={2}>
-                        <Grid item xs={12} md={6}>
+                        <Grid item xs={12} md={3}>
                             <Button fullWidth size="large" onClick={generateName} variant="contained">
                                 Generate
                             </Button>
+                        </Grid>
+
+                        <Grid item xs={12} md={9}>
+                            <TextField InputLabelProps={{shrink: true}} label="Name" 
+                            size="small" disabled fullWidth value={name} />
                         </Grid>
 
                         <Grid item xs={12}>

@@ -17,7 +17,7 @@ const Footer = () => {
                 <span className='connect'>YouTube</span>
             </Link>
             
-            <p className="copyright">© 2022 Foster Dog Namer</p>
+            <p className="copyright"> &copy; {new Date().getUTCFullYear()} Faraja Thompson. All rights reserved.</p>
         </div>
         </>
 
