@@ -18,8 +18,20 @@ const Home = () => {
             .then((data) => setData(data.message));
     }, []);
 
-    function getRandom(arr) {
-        return arr [Math.floor(Math.random() * arr.length)];
+    // function getRandom(arr) {
+    //     return arr [Math.floor(Math.random() * arr.length)]
+    // };
+
+    const {params, setParams} = useState({
+        gender: "Neutral",
+        size: "Tall",
+        color: "Dark",
+        temperament: "Neutral"
+    });
+
+    const handleChange = e => {
+        const {name, value} = e.target;
+        setParams({...params, [name]: value})
     }
 
     return (
@@ -38,7 +50,9 @@ const Home = () => {
         </div>
 
         <Fragment>
-            <Namer />
+            <Namer 
+                handleChange={handleChange}
+                params={params}/>
         </Fragment>
         
 

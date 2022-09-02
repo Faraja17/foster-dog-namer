@@ -15,7 +15,7 @@ const Item = styled(Paper)(({theme}) => ({
 const Namer = (props) => {
     const {
         handleChange = () => {}, 
-        params={}, 
+        params = {},
         generateName = () => {},
     } = props;
 
@@ -98,12 +98,6 @@ const Namer = (props) => {
                         <Grid item xs={12} md={9}>
                             <TextField InputLabelProps={{shrink: true}} label="Name" 
                             size="small" disabled fullWidth value={name} />
-                        </Grid>
-
-                        <Grid item xs={12}>
-                            <Typography align="center" variant="subtitle2">
-                                Copyrignt 2022 Foster Dog Namer
-                            </Typography>
                         </Grid>
                     </Grid>
                 </Item>
