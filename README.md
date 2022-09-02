@@ -1,70 +1,22 @@
-# Getting Started with Create React App
+# dog-namer-app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full stack foster dog namer web application produced from an original idea!
 
-## Available Scripts
+### Screenshots
 
-In the project directory, you can run:
+|                                                       <b>Responsive</b>                                                        |
+| :------------------------------------------------------------------------------------------------------------------------------------: |
+| ![Responsive](https://github.com/Faraja17/foster-dog-namer/blob/main/Screen%20Shot%202022-09-02%20at%2010.14.15%20AM.png?raw=true) |
 
-### `npm start`
+### Links
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+[Full stack on Vercel!](https://foster-dog-namer.vercel.app/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### What I learned
 
-### `npm test`
+8/27/22 - I ran into a lot of problems attempting to deploy the React version to the existing Heroku server. I followed [these steps](https://www.freecodecamp.org/news/how-to-create-a-react-app-with-a-node-backend-the-complete-guide/), but got stuck at step two. the "Hello from server!" message would not appear. So I stopped to take a break for that day. The next day, it miraculously worked with no intervention!
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Next, I got stuck in step five with adding a build script to the server package.json file (by the way, my server is app.js in dog-namer-app, not index.js in server, but that wasn't the problem). Kept getting this error: Error: ENOENT: no such file or directory, stat '/Users/aja/Projects/foster-dog-namer/build/index.html' The directions did not say anything about first running `npm run build` within the React directory to create the build folder! After hours of research, and trial and error, I found that information [here](https://stackoverflow.com/questions/41495658/use-custom-build-output-folder-when-using-create-react-app). In reading the Heroku docs, I had also removed `/build` from `gitignore` before I learned that I needed to create the build folder, so not sure if that helped!
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Great! So now I have successfully deployed the react app locally from port 3000 to port 3001, but still working on an error deploying to Heroku: "sh: 1: cd: can't cd to foster-dog-namer
+-----> Build failed"
