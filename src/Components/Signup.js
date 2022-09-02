@@ -16,8 +16,8 @@ const Signup = () => {
                     <input type="text" name="lName" className="form-control middle" placeholder="Last Name" required />
                     <input type="email" name="email" className="form-control bottom" placeholder="Email" required />
         
-                    <button class="w-100 btn btn-lg btn-primary" type="submit">Register</button>
-                    {/* <p class="mt-5 mb-3 text-muted">&copy; 2022 Foster Dog Namer</p> */}
+                    <button className="w-100 btn btn-lg btn-primary" type="submit">Register</button>
+                    {/* <p className="mt-5 mb-3 text-muted">&copy; 2022 Foster Dog Namer</p> */}
                 </form>
             </div>
             

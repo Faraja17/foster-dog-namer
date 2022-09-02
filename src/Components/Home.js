@@ -3,35 +3,59 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import About from './About';
 import Signup from './Signup';
-import {styled} from '@mui/material';
 import { Fragment } from 'react';
 import { useState } from 'react';
 import Namer from './Namer';
 
+import {femaleDog} from "../data/femaleDog";
+import {maleDog} from "../data/maleDog";
+
 
 const Home = () => {
-    const [data, setData] = React.useState(null);
+    // const [data, setData] = React.useState(null);
 
-    React.useEffect(() => {
-        fetch("/api")
-            .then((res) => res.json())
-            .then((data) => setData(data.message));
-    }, []);
+    // React.useEffect(() => {
+    //     fetch("/api")
+    //         .then((res) => res.json())
+    //         .then((data) => setData(data.message));
+    // }, []);
 
-    // function getRandom(arr) {
-    //     return arr [Math.floor(Math.random() * arr.length)]
-    // };
+    function getRandom(arr) {
+        return arr[Math.floor(Math.random() * arr.length)]
+    };
 
-    const {params, setParams} = useState({
-        gender: "Neutral",
-        size: "Tall",
-        color: "Dark",
+    const [params, setParams] = useState({
+        gender: "Female",
         temperament: "Neutral"
     });
 
     const handleChange = e => {
-        const {name, value} = e.target;
-        setParams({...params, [name]: value})
+        let {name, value} = e.target;
+        setParams({...params, [name]: value});
+        // setParams (prev => {
+        //     return {
+        //         ...prev,
+        //         [name]: value
+        //     };
+        // });
+
+    };
+
+    const generateName = () => {
+        const {gender, temperament} = params;
+
+        let name = "";
+
+        if (gender === "Female") {
+            temperament === "Neutral"
+                ? name = getRandom(femaleDog).femaleDog
+                : name = getRandom(maleDog).maleDog; 
+            console.log(name)
+        } 
+
+        setParams({...params, name : {name}})
+    console.log({name});
+    console.info({params});
     }
 
     return (
@@ -51,6 +75,7 @@ const Home = () => {
 
         <Fragment>
             <Namer 
+                generateName={generateName}
                 handleChange={handleChange}
                 params={params}/>
         </Fragment>
@@ -67,7 +92,7 @@ const Home = () => {
         <Signup /> {/*This is the signup component*/}
         <Footer /> {/*This is the footer component*/}
     </div>
-
+    
 )};
 
 export default Home;

@@ -1,6 +1,6 @@
 import React from 'react';
 import {styled, Button, Grid, FormControl, 
-    Typography, FormLabel, RadioGroup, Paper,
+    FormLabel, RadioGroup, Paper,
     Radio, Box, FormControlLabel, TextField} 
     from '@mui/material';
 
@@ -14,17 +14,17 @@ const Item = styled(Paper)(({theme}) => ({
 
 const Namer = (props) => {
     const {
-        handleChange = () => {}, 
-        params = {},
-        generateName = () => {},
+        handleChange, 
+        params,
+        generateName
     } = props;
 
-    const {name, gender, size, color, temperament} = params;
+    const {name, gender, size, color, temperament} = {params};
 
     return (
-        <Box class="api" id="start">
+        <Box id="start">
              <Grid container justify="space-around" alignItems="center">
-                <Grid container direction="row" paddingLeft={5}>
+                <Grid container direction="row" paddingLeft={5} paddingTop={5}>
                     <Item>
                         <FormControl component="fieldset">
                             <FormLabel align="left" component="legend">
@@ -32,7 +32,7 @@ const Namer = (props) => {
                             </FormLabel>
                                 
                             <RadioGroup row aria label="gender" defaultValue="neutral" 
-                            name="neutral" value={gender} onChange={handleChange}>
+                            name="gender" value={gender} onChange={handleChange}>
                                 <FormControlLabel value="neutral" control={<Radio />} label="Neutral" />
                                 <FormControlLabel value="female" control={<Radio />} label="Female" />
                                 <FormControlLabel value="male" control={<Radio />} label="Male" />
@@ -86,7 +86,7 @@ const Namer = (props) => {
                 </Grid>
             </Grid>
 
-            <Grid item xs={12} style={{marginLeft:0}}>
+            <Grid item xs={12} style={{marginLeft:0}} paddingBottom={5}>
                 <Item>
                     <Grid container spacing={2}>
                         <Grid item xs={12} md={3}>
@@ -105,5 +105,6 @@ const Namer = (props) => {
         </Box>
     );
 };
+
 
 export default Namer;
