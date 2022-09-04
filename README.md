@@ -6,7 +6,7 @@ A full stack foster dog namer web application produced from an original idea!
 
 |                                                         <b>Responsive</b>                                                         |
 | :-------------------------------------------------------------------------------------------------------------------------------: |
-| ![Responsive](https://github.com/Faraja17/foster-dog-namer/blob/main/Screen%20Shot%202022-09-03%20at%208.40.01%20PM.png?raw=true) |
+| ![Responsive](https://github.com/Faraja17/foster-dog-namer/blob/main/Screen%20Shot%202022-09-04%20at%203.17.44%20PM.png?raw=true) |
 
 ### Links
 
