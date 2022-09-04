@@ -11,8 +11,7 @@ const Signup = () => {
        <>
             <div id="signup">
                 <form className="form-signin">
-                    <a href="https://dog-namer-app.herokuapp.com/" target="_blank" rel="noopener noreferrer"><img className="mb-4 dog-print" src="https://cdn.pixabay.com/photo/2012/04/18/00/06/print-36174_960_720.png" alt="" width="72" height="57" />
-                    </a>
+                    <img className="mb-4 dog-print" src="https://cdn.pixabay.com/photo/2012/04/18/00/06/print-36174_960_720.png" alt="" width="72" height="57" />
                     <h1 className="h3 mb-3 fw-normal newsletter">Sign up for our newsletter!</h1>
                     
                     <button className="w-100 btn btn-lg btn-primary" onClick={() => openInNewTab('https://dog-namer-app.herokuapp.com/')}>
