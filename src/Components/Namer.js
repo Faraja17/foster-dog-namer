@@ -139,9 +139,9 @@ export default function FullWidthGrid(props) {
                             <TextField InputLabelProps={{shrink: true}} label="Here is your generated name:" size="small" disabled fullWidth value={name} />
                         </Grid>
                         
-                        <Grid item xs={12} md={4} lg={4} align="right" >
+                        <Grid item xs={12} md={3} lg={3} align="right" >
                             <Button size="large" variant="contained" onClick= {generateName}>
-                                Generate
+                                Woof!
                             </Button>
                         </Grid>                           
                     </Grid>
