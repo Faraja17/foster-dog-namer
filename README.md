@@ -10,8 +10,8 @@ A full stack foster dog namer web application produced from an original idea!
 
 ### Links
 
-[Full stack on Vercel!](https://foster-dog-namer.vercel.app/)
-[On Am I Responsive Website](https://ui.dev/amiresponsive?url=https://foster-dog-namer.vercel.app/)
+- [Full stack on Vercel!](https://foster-dog-namer.vercel.app/)
+- [On Am I Responsive Website](https://ui.dev/amiresponsive?url=https://foster-dog-namer.vercel.app/)
 
 ### What I learned
 
