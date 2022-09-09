@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Namer from './Namer';
 
 import {femaleDog} from "../data/femaleDog";
+import {neutralDog} from "../data/neutralDog";
 import {maleDog} from "../data/maleDog";
 
 export default function FullWidthGrid() {
@@ -11,9 +12,8 @@ export default function FullWidthGrid() {
         return arr[Math.floor(Math.random() * arr.length)]
     };
 
-    const [params, setParams] = useState({
-        gender: "female",
-        temperament: "neutral"
+    const [params, setParams] = useState({ 
+        gender: "female" //add more params here as program develops
     });
 
     const handleChange = e => {
@@ -30,17 +30,17 @@ export default function FullWidthGrid() {
     };
 
     const generateName = () => {
-        const {gender, temperament} = params;
+        const {gender} = params; //add more params here as program develops
 
         let name = "";
 
         if (gender === "female") {
-            temperament === "neutral"
-                ? name = getRandom(femaleDog).femaleDog
-                : name = getRandom(maleDog).maleDog; 
+            name = getRandom(femaleDog).femaleDog;        
+        } else if (gender === "neutral") {
+            name = getRandom(neutralDog).neutralDog; 
         } else {
             name = getRandom(maleDog).maleDog; 
-        };
+        }
 
         setParams(prev => {
             return {
@@ -48,8 +48,6 @@ export default function FullWidthGrid() {
                 name: name
             };
         });
-    console.log({name});
-    console.info({params});
     };
 
     return (

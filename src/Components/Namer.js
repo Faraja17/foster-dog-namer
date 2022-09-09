@@ -27,13 +27,9 @@ export default function FullWidthGrid(props) {
         <Box id="start" sx={{ bgcolor: 'text.primary', flexGrow: 1, padding: 5, 
         bottom: "10vh", width: "100vw", margin: 0 }}>
             <Grid container spacing={2} justify="space-around">
-                <Grid item md={4}>
-                {/* <Grid container spacing={2} justify="center" alignItems="center">
-                    <Grid container direction="row" paddingLeft={5} paddingTop={5}> */}                   
+                <Grid item md={4}>                   
                 </Grid>
                 <Grid item xs={12} md={4}>
-             {/* <Grid container spacing={2} justify="center" alignItems="center">
-                <Grid container direction="row" paddingLeft={5} paddingTop={5}> */}
                     <Item>
                         <FormControl component="fieldset">
                             <FormLabel align="left" component="legend">
@@ -49,14 +45,10 @@ export default function FullWidthGrid(props) {
                         </FormControl>
                     </Item>
                 </Grid>
-                <Grid item md={4}>
-                {/* <Grid container spacing={2} justify="center" alignItems="center">
-                    <Grid container direction="row" paddingLeft={5} paddingTop={5}> */}                    
+                <Grid item md={4}>                    
                 </Grid>
 
-                <Grid item md={4}>
-                {/* <Grid container spacing={2} justify="center" alignItems="center">
-                    <Grid container direction="row" paddingLeft={5} paddingTop={5}> */}                    
+                <Grid item md={4}>                    
                 </Grid>
                 <Grid item xs={12} md={4}>
                     <Item>
@@ -73,14 +65,10 @@ export default function FullWidthGrid(props) {
                         </FormControl>
                     </Item>
                 </Grid>
-                <Grid item md={4}>
-                {/* <Grid container spacing={2} justify="center" alignItems="center">
-                    <Grid container direction="row" paddingLeft={5} paddingTop={5}> */}                    
+                <Grid item md={4}>                    
                 </Grid>
 
-                <Grid item md={4}>
-                {/* <Grid container spacing={2} justify="center" alignItems="center">
-                    <Grid container direction="row" paddingLeft={5} paddingTop={5}> */}                    
+                <Grid item md={4}>                    
                 </Grid>            
                 <Grid item xs={12} md={4}>
                     <Item>
@@ -98,14 +86,10 @@ export default function FullWidthGrid(props) {
                         </FormControl>
                     </Item>
                 </Grid>
-                <Grid item md={4}>
-                {/* <Grid container spacing={2} justify="center" alignItems="center">
-                    <Grid container direction="row" paddingLeft={5} paddingTop={5}> */}                    
+                <Grid item md={4}>                    
                 </Grid>
 
-                <Grid item md={4}>
-                {/* <Grid container spacing={2} justify="center" alignItems="center">
-                    <Grid container direction="row" paddingLeft={5} paddingTop={5}> */}                    
+                <Grid item md={4}>                    
                 </Grid>                
                 <Grid item xs={12} md={4}>
                     <Item>
@@ -123,14 +107,10 @@ export default function FullWidthGrid(props) {
                         </FormControl>
                     </Item>
                 </Grid>
-                <Grid item md={4}>
-                {/* <Grid container spacing={2} justify="center" alignItems="center">
-                    <Grid container direction="row" paddingLeft={5} paddingTop={5}> */}                    
+                <Grid item md={4}>                    
                 </Grid>
 
-                <Grid item md={4}>
-                {/* <Grid container spacing={2} justify="center" alignItems="center">
-                    <Grid container direction="row" paddingLeft={5} paddingTop={5}> */}                    
+                <Grid item md={4}>                    
                 </Grid>                
                 <Grid item xs={12} md={4}>
                 <Item>
@@ -148,9 +128,7 @@ export default function FullWidthGrid(props) {
                 </Item>
                 </Grid>
 
-                <Grid item md={4}>
-                {/* <Grid container spacing={2} justify="center" alignItems="center">
-                    <Grid container direction="row" paddingLeft={5} paddingTop={5}> */}                    
+                <Grid item md={4}>                    
                 </Grid>
             </Grid>          
         </Box>
